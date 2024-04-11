@@ -19,6 +19,7 @@
     # for GCC
     Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
     # Refresh shell if you needed
+    # cf. https://qiita.com/javacommons/items/49d1503c8e76dbaa0fb0
     scoop install mingw-winlibs
 
     # Other tools
