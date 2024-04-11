@@ -69,7 +69,6 @@ endif()
 set(bind_name bind)
 # モジュール定義
 pybind11_add_module(${bind_name} "./src/bind/bind.cpp")
-# set_target_properties(${bind_name} PROPERTIES OUTPUT_NAME mypackage/${bind_name})
 
 target_link_libraries(${bind_name} PUBLIC
         glog::glog

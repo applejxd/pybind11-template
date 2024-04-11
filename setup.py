@@ -130,6 +130,7 @@ class CMakeBuild(build_ext):
 # The information here can also be placed in setup.cfg - better separation of
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
-    ext_modules=[CMakeExtension("bind")],
+    # mypackage フォルダ直下に bind.*.pyd を生成
+    ext_modules=[CMakeExtension("mypackage.bind")],
     cmdclass={"build_ext": CMakeBuild},
 )
