@@ -91,6 +91,15 @@ cmake -B build -S .
 cmake --build build --config Release
 ```
 
+## How to build wheel
+
+```shell
+# source code only
+python setup.py sdist
+# build package (`pip install wheel` needed)
+python setup.py bdist_wheel
+```
+
 ## Notes
 
 - In windows environemnts, Japanese character cannot be used for descriptions of pybind11 modules.
