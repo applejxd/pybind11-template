@@ -1,0 +1,9 @@
+# from https://setuptools.pypa.io/en/latest/userguide/quickstart.html
+[build-system]
+requires = ["setuptools>=42", "wheel", "ninja", "cmake>=3.12"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage"
+version = "0.0.1"
+dependencies = ["pybind11", "numpy", "fire"]
