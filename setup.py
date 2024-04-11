@@ -88,7 +88,10 @@ class CMakeBuild(build_ext):
             # contain a backward-compatibility arch spec already in the
             # generator name.
             if not single_config and not contains_arch:
-                cmake_args += ["-A", PLAT_TO_CMAKE[self.plat_name]]
+                cmake_args += [
+                    "-A",
+                    PLAT_TO_CMAKE[self.plat_name],
+                ]
 
             # Multi-config generators have a different way to specify configs
             if not single_config:
@@ -127,6 +130,6 @@ class CMakeBuild(build_ext):
 # The information here can also be placed in setup.cfg - better separation of
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
-    ext_modules=[CMakeExtension("cmake_example")],
+    ext_modules=[CMakeExtension("bind")],
     cmdclass={"build_ext": CMakeBuild},
 )

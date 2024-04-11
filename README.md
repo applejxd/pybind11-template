@@ -1,6 +1,6 @@
 # pybind11-template
 
-## Requirements
+## How to install
 
 ### Windows
 
@@ -35,6 +35,24 @@
     which python
     ```
 
+4. Install this library: `pip install -e .`
+
+If you need this binding only, do these:
+
+- For MSVC
+
+    ```powershell
+    cmake -G "Visual Studio 17 2022" -A "x64" -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -B build -S .
+    cmake --build build --config Release
+    ```
+
+- For GCC
+
+    ```powershell
+    cmake -G "Ninja" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -B build -S .
+    cmake --build build --config Release
+    ```
+
 ### Ubuntu
 
 1. Install Python
@@ -63,3 +81,17 @@
     source ./.venv/bin/activate
     which python
     ```
+
+4. Install this library: `pip install -e .`
+
+If you need this binding only, do these:
+
+```bash
+cmake -B build -S .
+cmake --build build --config Release
+```
+
+## Notes
+
+- In windows environemnts, Japanese character cannot be used for descriptions of pybind11 modules.
+- Older version for glog and Eigen3 cannot be used to build in Windows environments.
